@@ -1,0 +1,5 @@
+.ansible/
+.vagrant/
+.kitchen/
+.molecule/
+*.retry

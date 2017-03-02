@@ -1,0 +1,6 @@
+---
+- name: Reload systemd
+  become: true
+  become_method: sudo
+  command: systemctl daemon-reload
+...

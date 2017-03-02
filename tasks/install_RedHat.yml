@@ -1,0 +1,15 @@
+---
+- name: Install THING
+  become: true
+  become_method: sudo
+  package:
+    name: THING
+    state: present
+
+- name: Enable THING to start at boot
+  become: true
+  become_method: sudo
+  service:
+    name: THING
+    enabled: true
+...

@@ -1,0 +1,42 @@
+---
+driver:
+  name: vagrant
+  use_sudo: false
+  forward_agent: true
+
+provisioner:
+  hosts: test-kitchen
+  name: ansible_playbook
+  require_ansible_repo: true
+  ansible_yum_repo: epel
+  require_ansible_omnibus: false
+  ansible_verbosity: 2
+  ansible_verbose: true
+  ansible_diff: true
+  require_chef_for_busser: true
+  update_package_repos: false
+  ansible_extra_flags: <%= ENV['ANSIBLE_EXTRA_FLAGS'] %>
+  ansible_vault_password_file: .vault_password
+#  requirements_path: test/requirements.yml
+#  ssh_known_hosts:
+#    - bitbucket.org
+
+platforms:
+  - name: centos-7
+    driver:
+      box: centos/7
+      provision: true
+      vagrantfiles:
+        - .vagrant.rb
+      network:
+        - ["private_network", {ip: "192.168.33.10"}]
+      customize:
+        memory: 512
+
+suites:
+  - name: default
+
+transport:
+  forward_agent: true
+  name: rsync
+...

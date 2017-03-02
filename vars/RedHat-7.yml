@@ -1,0 +1,8 @@
+---
+__salt_master_package: salt-master
+__salt_api_package: salt-api
+__salt_minion_package: salt-minion
+__salt_syndic_package: salt-syndic
+__salt_cloud_package: salt-cloud
+__salt_ssh_package: salt-ssh
+

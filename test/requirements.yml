@@ -1,0 +1,6 @@
+---
+- src: git@github.com:DRrawlins/ansible-role-repo-salt.git
+  scm: git
+  name: repo-salt
+  # version: v0.0.0
+...

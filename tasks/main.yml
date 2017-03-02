@@ -1,0 +1,29 @@
+---
+- name: Include OS-specific variables (RHEL versions)
+  include_vars: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
+  when: ansible_os_family == "RedHat"
+
+- name: Define Salt packages
+  set_fact:
+    salt_master_package: "{{ __salt_master_package }}"
+    salt_api_package: "{{ __salt_api_package }}"
+    salt_minion_package: "{{ __salt_minion_package }}"
+    salt_syndic_package: "{{ __salt_syndic_package }}"
+    salt_cloud_package: "{{ __salt_cloud_package }}"
+    salt_ssh_package: "{{ __salt_ssh_package }}"
+  when: salt_master_package is not defined or
+        salt_api_package is not defined or
+        salt_minion_package is not defined or
+        salt_syndic_package is not defined or
+        salt_cloud_package is not defined or
+        salt_ssh_packagae is not defined
+
+- name: Install packages
+  become: true
+  become_method: sudo
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+      - git
+...
