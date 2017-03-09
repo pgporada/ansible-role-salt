@@ -3,7 +3,6 @@ galaxy_info:
   author: danrawlins07@gmail.com and philporada@gmail.com
   description: Configures and installs salt minions and master(s)
   contributors: philporada@gmail.com
-  description: ansible-role-salt
   min_ansible_version: 2.2
   license: ISC
   platforms:
