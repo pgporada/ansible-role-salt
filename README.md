@@ -43,3 +43,10 @@ Run your changes through a local test-kitchen setup.
 - - - -
 # Theme Music
 [The Aggrolites - Faster Bullet](https://www.youtube.com/watch?v=GwQjzsB6TVM)
+
+- - - -
+# Author Information and License
+
+ISC
+
+@pporada and @drrawlins 2016
