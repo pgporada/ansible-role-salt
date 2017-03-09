@@ -1,15 +1,61 @@
 ---
-- name: Install THING
+- name: Install Salt-master Package
   become: true
   become_method: sudo
   package:
-    name: THING
+    name: "{{ item }}"
     state: present
+  with_items:
+    - "{{ __salt_master_package }}"
+  when: __salt_master_package is defined and __salt_master_package
 
-- name: Enable THING to start at boot
+- name: Install Salt-api Package
   become: true
   become_method: sudo
-  service:
-    name: THING
-    enabled: true
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ __salt_api_package }}"
+  when: __salt_api_package is defined and __salt_api_package
+
+- name: Install Salt-minion Package
+  become: true
+  become_method: sudo
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ __salt_minion_package }}"
+  when: __salt_minion_package is defined and __salt_minion_package
+
+- name: Install Salt-syndic Package
+  become: true
+  become_method: sudo
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ __salt_syndic_package }}"
+  when: __salt_syndic_package is defined and __salt_syndic_package
+
+- name: Install Salt-cloud Package
+  become: true
+  become_method: sudo
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ __salt_cloud_package }}"
+  when: __salt_cloud_package is defined and __salt_cloud_package
+
+- name: Install Salt-ssh Package
+  become: true
+  become_method: sudo
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ __salt_ssh_package }}"
+  when: __salt_ssh_package is defined and __salt_ssh_package
 ...
