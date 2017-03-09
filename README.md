@@ -1,4 +1,7 @@
 # Ansible Role: ansible-role-salt
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-salt-blue.svg)](https://galaxy.ansible.com/pgporada/salt/)
+[![License](https://img.shields.io/badge/license-ISC-brightgreen.svg)](LICENSE)
+
 Installs and configures a salt minion/master.
 
 - - - -
