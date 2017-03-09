@@ -49,4 +49,4 @@ Run your changes through a local test-kitchen setup.
 
 ISC
 
-@pporada and @drrawlins 2016
+[Phil Porada](https://github.com/pgporada) and [Dan Rawlins](https://github.com/drrawlins) 2016
