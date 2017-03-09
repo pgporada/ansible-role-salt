@@ -1,7 +1,7 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "test-kitchen"
-gem "kitchen-vagrant"
-gem "kitchen-ansible"
-gem "busser-bats"
-gem "kitchen-sync"
+gem 'busser-bats'
+gem 'kitchen-ansible'
+gem 'kitchen-sync'
+gem 'kitchen-vagrant'
+gem 'test-kitchen'
