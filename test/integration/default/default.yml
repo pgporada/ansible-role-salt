@@ -1,7 +1,7 @@
 ---
 - hosts: test-kitchen
 
-# This path is relative inside the vagrant at /tmp/kitchen
+  # This path is relative inside the vagrant at /tmp/kitchen
   vars_files:
     - roles/ansible-role-salt/test/integration/default/vault-vars.yml
 
